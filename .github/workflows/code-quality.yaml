@@ -19,8 +19,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       # installs poetry
+      - uses: abatilo/actions-poetry@v2.1.6
       - name: Python Poetry Action
-        uses: abatilo/actions-poetry@v2.1.6
         run: |
           poetry install
       - name: Run tox
