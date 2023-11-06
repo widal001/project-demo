@@ -19,4 +19,4 @@ jobs:
           poetry install
       - name: Run the CLI script to export the tickets
         run: |
-          poetry run python cli.py
+          poetry run python cli.py --owner widal001 --repo project-demo --project 3
