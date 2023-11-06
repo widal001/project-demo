@@ -1,5 +1,6 @@
 # pylint: disable=invalid-name, unspecified-encoding
 import json
+from pathlib import Path
 import shlex
 import subprocess
 
@@ -10,6 +11,10 @@ SPRINT_FILE = "data/sprint-data.json"
 
 def pipe_command_to_file(command: str, output_file: str):
     """Write the output of a sub-process to a file"""
+    # Make sure the output file's parent directory exists
+    file_path = Path(output_file)
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    # Run the command and write the standard output to a file
     with open(output_file, "w") as f:
         subprocess.call(shlex.split(command), stdout=f)
 
