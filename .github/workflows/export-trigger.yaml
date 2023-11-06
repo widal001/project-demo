@@ -1,0 +1,22 @@
+name: Export GitHub data
+
+on: workflow_dispatch
+
+jobs:
+  export-data:
+    runs-on: ubuntu-latest
+    steps:
+      # installs python 3.10
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      # installs poetry
+      - uses: Gr1N/setup-poetry@v8
+      - name: Install the app with poetry
+        run: |
+          poetry install
+      - name: Run the CLI script to export the tickets
+        run: |
+          poetry run python cli.py
