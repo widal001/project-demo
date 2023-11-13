@@ -4,7 +4,7 @@ name: Internal - 10k ft deliverable
 about: Describe a new feature or functionality at a 10,000 foot view
 title: "[10k]: "
 labels:
-  - "deliverable: 30k"
+  - "deliverable: 10k ft"
 assignees: ""
 
 ---
