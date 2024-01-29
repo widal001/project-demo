@@ -1,3 +1,7 @@
-# Sample file to include in the wiki
+---
+description: Sample file that should be synced
+---
 
-This file should be icnluded with git syncing
+# Include this file
+
+This file should be included with git syncing.
