@@ -8,6 +8,8 @@ This file should be visible in the preview on GitBook from the PR.
 
 A new line that should appear in the preview
 
+This should show another new line.
+
 | Sample | Table   |
 | ------ | ------- |
 | Row 1  | Value 1 |
