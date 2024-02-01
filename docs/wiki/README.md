@@ -18,6 +18,8 @@ layout: landing
 
 GitBook offers support for multiple different types of content. We've included examples of a few of them in the subsequent sections.
 
+Adding a new line to the landing page.
+
 ## Content Blocks
 
 ### Expandable Sections
