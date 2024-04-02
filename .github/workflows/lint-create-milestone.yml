@@ -16,8 +16,6 @@ jobs:
       issues: write
     env:
      GH_TOKEN: ${{ github.token }}
-     ISSUE_TITLE: ${{ github.event.issue.title }}
-     ISSUE_NUMBER: ${{ github.event.issue.number }}
 
     steps:
       - uses: actions/checkout@v3
@@ -29,4 +27,4 @@ jobs:
             -f title='${{ github.event.issue.title }}'
       - name: Assign issue to milestone
         run: |
-          gh issue edit ${{ github.event.issue.title }} --milestone "${ISSUE_TITLE}" --repo widal001/project-demo
+          gh issue edit ${{ github.event.issue.number }} --milestone '${{ github.event.issue.number }}' --repo widal001/project-demo
