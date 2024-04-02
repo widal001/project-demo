@@ -10,6 +10,9 @@ jobs:
     if: ${{ contains(github.event.issue.labels.*.name, 'bug') }}
     runs-on: ubuntu-latest
 
+    # set permissions of automatically created GitHub token to issue: write
+    permissions:
+      issues: write
     env:
      GH_TOKEN: ${{ github.token }}
 
