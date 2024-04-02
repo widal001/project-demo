@@ -2,7 +2,7 @@ name: Lint - Create milestone for 10k
 
 on:
   issues:
-    types: [opened]
+    types: [opened, edited, labeled]
 
 jobs:
   create-milestone:
@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/check@v4
+      - uses: actions/checkout@v3
       - name: Print issue name
         run: echo "Issue name is " ${{ github.event.issue.title }}
