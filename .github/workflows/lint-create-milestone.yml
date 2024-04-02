@@ -10,6 +10,9 @@ jobs:
     if: ${{ contains(github.event.issue.labels.*.name, 'bug') }}
     runs-on: ubuntu-latest
 
+    env:
+     GH_TOKEN: ${{ github.token }}
+
     steps:
       - uses: actions/checkout@v3
       - name: Print issue name
@@ -19,4 +22,4 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             /repos/widal001/project-demo/milestones \
             -f title='${{ github.event.issue.title }}'
-           -f state='open'
+            -f state='open'
