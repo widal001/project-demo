@@ -13,4 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Print issue name
-        run: echo "Issue name is " ${{ github.event.issue.title }}
+        run: |
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            /repos/widal001/project-demo/milestones \
+            -f title='${{ github.event.issue.title }}'
+           -f state='open'
