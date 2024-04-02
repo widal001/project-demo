@@ -8,7 +8,7 @@ jobs:
   create-milestone:
     name: Create milestone for 10k issue
     # only run this if issue has the 'deliverable: 10k' label and isn't assigned to a milestone
-    if: ${{ contains(github.event.issue.labels.*.name, '10k ft') && (! github.event.issue.milestone) }}
+    if: "${{ contains(github.event.issue.labels.*.name, 'deliverable: 10k ft') && (! github.event.issue.milestone) }}"
     runs-on: ubuntu-latest
 
     # set permissions of automatically created GitHub token to issue: write
