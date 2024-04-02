@@ -1,0 +1,16 @@
+name: Lint - Create milestone for 10k
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create-milestone:
+    name: Create milestone for 10k issue
+    if: ${{ contains(github.event.issue.labels.*.name, "bug") }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/check@v4
+      - name: Print issue name
+        run: echo "Issue name is " ${{ github.event.issue.title }}
