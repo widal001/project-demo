@@ -7,7 +7,7 @@ on:
 jobs:
   create-milestone:
     name: Create milestone for 10k issue
-    if: ${{ contains(github.event.issue.labels.*.name, "bug") }}
+    if: ${{ contains(github.event.issue.labels.*.name, 'bug') }}
     runs-on: ubuntu-latest
 
     steps:
