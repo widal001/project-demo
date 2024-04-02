@@ -29,4 +29,4 @@ jobs:
             -f title='${{ github.event.issue.title }}' \
       - name: Assign issue to milestone
         run: |
-          gh issue edit $ISSUE_NUMBER --milestone "${ISSUE_TITLE} --repo widal001/project-demo
+          gh issue edit ${{ github.event.issue.title }} --milestone "${ISSUE_TITLE}" --repo widal001/project-demo
