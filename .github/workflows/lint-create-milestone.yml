@@ -23,8 +23,8 @@ jobs:
         run: |
           gh api \
             --method POST \
-            /repos/${{ github.event.repository }}/milestones \
+            /repos/${{ github.repository }}/milestones \
             -f title='${{ github.event.issue.title }}'
       - name: Assign issue to milestone
         run: |
-          gh issue edit ${{ github.event.issue.number }} --milestone '${{ github.event.issue.title }}' --repo ${{ github.event.repository }}
+          gh issue edit ${{ github.event.issue.number }} --milestone '${{ github.event.issue.title }}' --repo ${{ github.repository }}
