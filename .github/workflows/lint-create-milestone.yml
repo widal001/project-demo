@@ -4,6 +4,10 @@ on:
   issues:
     types: [opened, edited, labeled]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
 jobs:
   create-milestone:
     name: Create milestone for 10k issue
