@@ -2,7 +2,7 @@
 description: Examples of resources that are not directly embedded on the page
 ---
 
-# Linked Resources
+# ✅ Linked Resources
 
 ## An uploaded PDF
 

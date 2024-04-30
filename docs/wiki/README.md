@@ -3,7 +3,6 @@ description: Landing page for 508 compliance review sample site
 cover: >-
   https://images.unsplash.com/photo-1562164038-91cfe1d7cbce?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw1fHxXYXNoaW5ndG9uJTIwREN8ZW58MHx8fHwxNjk2Mjc4NTQwfDA&ixlib=rb-4.0.3&q=85
 coverY: 0
-layout: landing
 ---
 
 # Landing Page
