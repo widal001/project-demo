@@ -1,0 +1,25 @@
+name: Close done issues
+
+on:
+  # Enables manual triggers of this action
+  workflow_dispatch:
+  # Run on a pull_request
+  pull_request:
+jobs:
+  auto-close-issues:
+    name: Auto-close issues that are done
+    runs-on: ubuntu-latest
+    env:
+      # Gives the gh CLI access to your project
+      GH_TOKEN: ${{ secrets.GH_TOKEN_PROJECT_ACCESS }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: widal001/auto-close-issues@v0.1.0
+        with:
+          owner: widal001
+          owner-type: user
+          project-number: "3"
+          status: "✅ Done"
+          # optionally control number of project items returned per API call
+          # must be less than or equal 100 due to GitHub limits
+          batch-size: "100"
